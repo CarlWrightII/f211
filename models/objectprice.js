@@ -1,3 +1,5 @@
+
+
 var baseprice = function(price, scrnsize, hardrive, mem)
 {
 	var bseprice={};
