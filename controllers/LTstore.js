@@ -1,8 +1,6 @@
-/*var mongoose = require('mongoose'),
-Prices = mongoose.model('prices');
-
 var mongoose = require('mongoose'),
-Prices = mongoose.model('prices');*/
+prices = mongoose.model('prices');
+
 exports.carts = function(req, res)
 {
 	res.render('LTstore', {intro: 'Computer Configurations'});	
