@@ -1,0 +1,42 @@
+extends layout
+block content
+  a(href="/cart") Your Cart
+  h1= intro
+  p
+  	Customizing your new Laptop!
+  br
+  h2(id='price')
+  br
+  br
+  form(id='order' , action='/', method='post')
+    input()
+    h3 Screen Size
+    p
+    label
+      input(type='radio', name='scrnsize', value=11, checked)
+        11-inch - Included
+    label
+      input(type='radio', name='scrnsize', value=15)
+        15 inch ($ 200.00)
+    br
+      h3 Hard Drives
+    label
+      input(type='radio', name='harddrive', value=128, checked)
+        128 GB - Included
+    label
+      input(type='radio', name='harddrive', value=256)
+        256 GB ($ 200.00)
+    br
+    label
+      input(type='radio', name='memsize', value=8, checked)
+        8 GB - Included
+    label
+      input(type='radio', name='memsize', value=16)
+        16 GB ($ 200.00)
+    br
+    br
+    br
+    input(type='submit', value='Place Order')
+
+
+  
