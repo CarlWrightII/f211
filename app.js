@@ -28,12 +28,19 @@ var app = express();
 
 //Mongoose Connection
 mongoose.connect("mongodb://localhost:27017/QuotesDB");
+<<<<<<< HEAD
 require('./models/prices');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', function callback(){});
 //view engine setup
 //app.set('port', process.env.PORT || 3000)
+=======
+// require('./models/prices');
+
+//view engine setup
+app.set('port', process.env.PORT || 3000)
+>>>>>>> 0e34165a43a7309e1d0398b8490c9fa2380fb801
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -44,15 +51,26 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+<<<<<<< HEAD
 //app.use(app.route);
 
 //app.get('/', routes.index);
 //app.get('/users', users.list);
+=======
+app.use(app.route);
+
+// app.get('/', routes.index);
+// app.get('/users', users.list);
+>>>>>>> 0e34165a43a7309e1d0398b8490c9fa2380fb801
 
 var LTstore = require('./controllers/LTstore.js');
 
 
+<<<<<<< HEAD
 app.get('/LTstore', LTstore.carts);
+=======
+app.get('/cart.jade', LTstore.carts);
+>>>>>>> 0e34165a43a7309e1d0398b8490c9fa2380fb801
 
 //app.use('/', routes);
 //app.use('/users', users);
@@ -88,8 +106,14 @@ app.use(function(err, req, res, next) {
     });
 });
 
+<<<<<<< HEAD
 /*http.createServer(app).listen(app.get('port'), function(){*/
 /*  console.log("listening on port" + app.get('port'));*/
 /*});*/
+=======
+http.createServer(app).listen(app.get('port'), function(){
+  console.log("listening on port" + app.get('port'));
+});
+>>>>>>> 0e34165a43a7309e1d0398b8490c9fa2380fb801
 
 module.exports = app;
